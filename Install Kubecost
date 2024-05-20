@@ -38,6 +38,6 @@ eksctl delete cluster --name kubecostdemo --region us-west-2
 
 6. kubectl get pods -n kubecost
 
-7. kubectl port-forward --namespace kubecost deployment/kubecost-cost-analyzer 9090
+7. kubectl port-forward deployment/kubecost-cost-analyzer -n kubecost 9090:9090 --address 0.0.0.0
 
-8. http://localhost:9090
+8. http://PublicIP:9090
